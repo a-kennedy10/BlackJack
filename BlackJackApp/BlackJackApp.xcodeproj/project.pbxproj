@@ -12,6 +12,8 @@
 		FA1C2F352537769D006371E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1C2F332537769D006371E5 /* Main.storyboard */; };
 		FA1C2F372537769F006371E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1C2F362537769F006371E5 /* Assets.xcassets */; };
 		FA1C2F3A2537769F006371E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1C2F382537769F006371E5 /* LaunchScreen.storyboard */; };
+		FACEC623253790B200E17966 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC622253790B200E17966 /* Card.swift */; };
+		FACEC6252537959E00E17966 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC6242537959E00E17966 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FA1C2F362537769F006371E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA1C2F392537769F006371E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA1C2F3B2537769F006371E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACEC622253790B200E17966 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FACEC6242537959E00E17966 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		FA1C2F2C2537769D006371E5 /* BlackJackApp */ = {
 			isa = PBXGroup;
 			children = (
+				FACEC6212537908A00E17966 /* Model */,
 				FA1C2F332537769D006371E5 /* Main.storyboard */,
 				FA1C2F41253776FB006371E5 /* Resources */,
 			);
@@ -70,6 +75,15 @@
 				FA1C2F3B2537769F006371E5 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FACEC6212537908A00E17966 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FACEC622253790B200E17966 /* Card.swift */,
+				FACEC6242537959E00E17966 /* Player.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACEC6252537959E00E17966 /* Player.swift in Sources */,
+				FACEC623253790B200E17966 /* Card.swift in Sources */,
 				FA1C2F2E2537769D006371E5 /* AppDelegate.swift in Sources */,
 				FA1C2F302537769D006371E5 /* SceneDelegate.swift in Sources */,
 			);
