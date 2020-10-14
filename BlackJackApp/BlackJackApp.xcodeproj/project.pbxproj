@@ -54,9 +54,7 @@
 		FA1C2F2C2537769D006371E5 /* BlackJackApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA1C2F4225377714006371E5 /* Models */,
-				FA1C2F432537771B006371E5 /* Controllers */,
-				FA1C2F4425377726006371E5 /* Views */,
+				FA1C2F332537769D006371E5 /* Main.storyboard */,
 				FA1C2F41253776FB006371E5 /* Resources */,
 			);
 			path = BlackJackApp;
@@ -72,28 +70,6 @@
 				FA1C2F3B2537769F006371E5 /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		FA1C2F4225377714006371E5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		FA1C2F432537771B006371E5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		FA1C2F4425377726006371E5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FA1C2F332537769D006371E5 /* Main.storyboard */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
