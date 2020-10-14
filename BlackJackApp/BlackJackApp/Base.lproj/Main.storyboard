@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Black Jack View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlackJackApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BlackJackViewController" customModule="BlackJackApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,9 @@
                                 <rect key="frame" x="124" y="801" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="(HIT)"/>
+                                <connections>
+                                    <action selector="hitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RkX-sw-h0E"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-Wn-cxW">
                                 <rect key="frame" x="171" y="204" width="72" height="100"/>
@@ -40,6 +43,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk2-Ii-T4E">
                                 <rect key="frame" x="359" y="49" width="25" height="24"/>
+                                <connections>
+                                    <action selector="infoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fEv-d0-vJR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl3-2y-sbb">
                                 <rect key="frame" x="20" y="741" width="29" height="21"/>
@@ -69,6 +75,9 @@
                                 <rect key="frame" x="230" y="801" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="(STAND)"/>
+                                <connections>
+                                    <action selector="standButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKL-bh-ijq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -81,10 +90,16 @@
                             <constraint firstItem="vk2-Ii-T4E" firstAttribute="leading" secondItem="lTq-jp-kt4" secondAttribute="trailing" constant="70" id="sD5-uk-DxF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dealerImageView" destination="EYf-Wn-cxW" id="W0K-G8-lxO"/>
+                        <outlet property="dealerScoreLabel" destination="slY-fF-5Th" id="EHK-lZ-0xE"/>
+                        <outlet property="yourImageView" destination="ruC-PV-Dpt" id="RaX-Ka-TE3"/>
+                        <outlet property="yourScoreLabel" destination="89M-Z3-ISN" id="CiB-ba-0P1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>
+            <point key="canvasLocation" x="707" y="81"/>
         </scene>
     </scenes>
     <resources>
