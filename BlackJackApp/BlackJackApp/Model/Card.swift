@@ -9,13 +9,31 @@
 import UIKit
 
 class Card {
+    var suit: String
+    var rank: String
     var cardValue: Int
-    var cardImage: UIImage
-    var score: String
     
-    init( cardValue: Int, cardImage: UIImage, score: String){
+    init(suit: String, rank: String, cardValue: Int){
+        self.suit = suit
+        self.rank = rank
         self.cardValue = cardValue
-        self.cardImage = cardImage
-        self.score = score
+    
     }
+    
+    class PlayingCard: Card {
+        func createDeck() -> [Card] {
+            let ranks = [Rank.ace, Rank.two, Rank.three, Rank.four, Rank.five, Rank.six, Rank.seven, Rank.eight, Rank.nine, Rank.ten, Rank.jack, Rank.queen, Rank.king]
+            let suits = [suit.spades, suit.hearts, suit.diamonds, suit.clubs]
+            var deck = [Card]()
+            for suit in suits {
+                for rank in ranks {
+                    deck.append(Card(rank: rank, suit: suit))
+                }
+            }
+            return deck
+        }
+    }
+    
 }
+
+
