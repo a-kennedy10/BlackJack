@@ -13,7 +13,11 @@ class Deck {
     var remainingCards: [Card]
     var reverseImage: UIImage
     
-    
+    init(dealtCards: [Card], remainingCards: [Card], reverseImage: UIImage) {
+        self.dealtCards = dealtCards
+        self.remainingCards = remainingCards
+        self.reverseImage = reverseImage
+    }
 }
 
 

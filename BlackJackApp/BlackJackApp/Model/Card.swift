@@ -9,14 +9,18 @@
 import UIKit
 
 class Card {
-    var suit: String
     var rank: String
     var cardValue: Int
+    var cardImage: UIImage?
     
-    init(suit: String, rank: String, cardValue: Int){
-        self.suit = suit
+    init(rank: String, cardValue: Int, cardImage: UIImage) {
         self.rank = rank
         self.cardValue = cardValue
+<<<<<<< HEAD
+=======
+        self.cardImage = cardImage
+    
+>>>>>>> 23a54002cba22504fbb67e47896e04ac918caf4b
     }
 }
 
