@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0E32142537A26600C1247B /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E32132537A26600C1247B /* CardController.swift */; };
+		5A0E321C2537A2C100C1247B /* BlackJackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E321B2537A2C100C1247B /* BlackJackViewController.swift */; };
 		FA1C2F2E2537769D006371E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C2F2D2537769D006371E5 /* AppDelegate.swift */; };
 		FA1C2F302537769D006371E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C2F2F2537769D006371E5 /* SceneDelegate.swift */; };
 		FA1C2F352537769D006371E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1C2F332537769D006371E5 /* Main.storyboard */; };
 		FA1C2F372537769F006371E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1C2F362537769F006371E5 /* Assets.xcassets */; };
 		FA1C2F3A2537769F006371E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1C2F382537769F006371E5 /* LaunchScreen.storyboard */; };
+		FA83CA032537A446004EFC8C /* CardValueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83CA022537A446004EFC8C /* CardValueExtension.swift */; };
+		FA83CA052537A7F6004EFC8C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83CA042537A7F6004EFC8C /* Game.swift */; };
+		FA83CA072537AB55004EFC8C /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83CA062537AB55004EFC8C /* Hand.swift */; };
+		FA83CA092537ADBB004EFC8C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83CA082537ADBB004EFC8C /* Deck.swift */; };
 		FACEC623253790B200E17966 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC622253790B200E17966 /* Card.swift */; };
-		FACEC6252537959E00E17966 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC6242537959E00E17966 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A0E32132537A26600C1247B /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
+		5A0E321B2537A2C100C1247B /* BlackJackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewController.swift; sourceTree = "<group>"; };
 		FA1C2F2A2537769D006371E5 /* BlackJackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackJackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1C2F2D2537769D006371E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA1C2F2F2537769D006371E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,8 +31,11 @@
 		FA1C2F362537769F006371E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA1C2F392537769F006371E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA1C2F3B2537769F006371E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA83CA022537A446004EFC8C /* CardValueExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValueExtension.swift; sourceTree = "<group>"; };
+		FA83CA042537A7F6004EFC8C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FA83CA062537AB55004EFC8C /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		FA83CA082537ADBB004EFC8C /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		FACEC622253790B200E17966 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		FACEC6242537959E00E17966 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0E32112537A0E600C1247B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E321A2537A29E00C1247B /* ViewController */,
+				5A0E32122537A0EC00C1247B /* ModelController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5A0E32122537A0EC00C1247B /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E32132537A26600C1247B /* CardController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		5A0E321A2537A29E00C1247B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A0E321B2537A2C100C1247B /* BlackJackViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		FA1C2F212537769D006371E5 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +93,7 @@
 		FA1C2F2C2537769D006371E5 /* BlackJackApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA83CA012537A421004EFC8C /* Extensions */,
 				FACEC6212537908A00E17966 /* Model */,
 				FA1C2F332537769D006371E5 /* Main.storyboard */,
 				FA1C2F41253776FB006371E5 /* Resources */,
@@ -77,11 +113,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FA83CA012537A421004EFC8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA83CA022537A446004EFC8C /* CardValueExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FACEC6212537908A00E17966 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				FACEC622253790B200E17966 /* Card.swift */,
-				FACEC6242537959E00E17966 /* Player.swift */,
+				5A0E32112537A0E600C1247B /* Controllers */,
+				FA83CA042537A7F6004EFC8C /* Game.swift */,
+				FA83CA062537AB55004EFC8C /* Hand.swift */,
+				FA83CA082537ADBB004EFC8C /* Deck.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,10 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACEC6252537959E00E17966 /* Player.swift in Sources */,
+				5A0E32142537A26600C1247B /* CardController.swift in Sources */,
+				5A0E321C2537A2C100C1247B /* BlackJackViewController.swift in Sources */,
+				FA83CA092537ADBB004EFC8C /* Deck.swift in Sources */,
+				FA83CA052537A7F6004EFC8C /* Game.swift in Sources */,
 				FACEC623253790B200E17966 /* Card.swift in Sources */,
+				FA83CA072537AB55004EFC8C /* Hand.swift in Sources */,
 				FA1C2F2E2537769D006371E5 /* AppDelegate.swift in Sources */,
 				FA1C2F302537769D006371E5 /* SceneDelegate.swift in Sources */,
+				FA83CA032537A446004EFC8C /* CardValueExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
