@@ -128,27 +128,36 @@ class BlackJackViewController: UIViewController {
 //    }
     
     //MARK: - Alert Controllers
-    func loseAlertController() {
-        let alertController = UIAlertController(title: "Lost", message: "Sorry you lost😢. Try your luck and play again!", preferredStyle: .alert)
+    func lostAlertController() {
+        let lostAlertController = UIAlertController(title: "Lost", message: "Sorry you lost😢. Try your luck and play again!", preferredStyle: .alert)
         
         let playAgainAction = UIAlertAction(title: "Play again!", style: .default) { (_) in
             self.updateViews()
         }
         
         
-        alertController.addAction(playAgainAction)
-        present(alertController, animated: true)
+        lostAlertController.addAction(playAgainAction)
+        present(lostAlertController, animated: true)
     }
     
     func wonAlertController() {
-        let alertController = UIAlertController(title: "WON!!", message: "Congrats You Won!!!", preferredStyle: .alert)
+        let wonAlertController = UIAlertController(title: "WON!!", message: "Congrats You Won!!!🍾", preferredStyle: .alert)
         
         let playAgain = UIAlertAction(title: "Play Again!", style: .default) { (_) in
             self.updateViews()
         }
-        alertController.addAction(playAgain)
-        present(alertController, animated: true)
+        wonAlertController.addAction(playAgain)
+        present(wonAlertController, animated: true)
+    }
+    
+    func tieAlertController() {
+        let tieAlertController = UIAlertController(title: "Tie!", message: "Well at least you didn't lose😐", preferredStyle: .alert)
         
+        let tiePlayAgain = UIAlertAction(title: "Play Again!", style: .default) { (_) in
+            self.updateViews()
+        }
+        tieAlertController.addAction(tiePlayAgain)
+        present(tieAlertController, animated: true)
     }
     
     
@@ -162,12 +171,6 @@ class BlackJackViewController: UIViewController {
     //shuffle function
     //deal function
     
-    func deal() {
-        
-         //cards.shuffle()
-        
-        //dealerImageView.image = UIImage(named: cards[0])
-    }
     
     //wining function if the hand value is greater then the dealers hand
     
