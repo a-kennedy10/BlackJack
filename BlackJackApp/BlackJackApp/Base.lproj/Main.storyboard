@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Black Jack View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlackJackApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BlackJackViewController" customModule="BlackJackApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,9 @@
                                 <rect key="frame" x="124" y="801" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="(HIT)"/>
+                                <connections>
+                                    <action selector="hitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RkX-sw-h0E"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10_of_clubs" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-Wn-cxW">
                                 <rect key="frame" x="171" y="204" width="72" height="100"/>
@@ -39,9 +42,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk2-Ii-T4E">
+
                                 <rect key="frame" x="359" y="93" width="25" height="24"/>
                                 <connections>
                                     <segue destination="7Ib-NR-9jj" kind="show" identifier="toInfoDetailVC" id="uv5-9w-vk4"/>
+
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl3-2y-sbb">
@@ -72,6 +77,9 @@
                                 <rect key="frame" x="230" y="801" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="(STAND)"/>
+                                <connections>
+                                    <action selector="standButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKL-bh-ijq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-Ei-QDV">
                                 <rect key="frame" x="184" y="433" width="49" height="30"/>
@@ -89,6 +97,7 @@
                             <constraint firstItem="vk2-Ii-T4E" firstAttribute="leading" secondItem="lTq-jp-kt4" secondAttribute="trailing" constant="70" id="sD5-uk-DxF"/>
                         </constraints>
                     </view>
+
                     <navigationItem key="navigationItem" id="IOt-TM-gVk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -211,6 +220,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRJ-jf-gJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="301" y="80"/>
+
         </scene>
     </scenes>
     <resources>
