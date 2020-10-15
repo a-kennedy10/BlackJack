@@ -11,10 +11,11 @@ import UIKit
 class BlackJackViewController: UIViewController {
     
     //MARK: - Outlets
-    @IBOutlet weak var dealerImageView: UIImageView!
-    @IBOutlet weak var yourScoreLabel: UILabel!
-    @IBOutlet weak var dealerScoreLabel: UILabel!
-    @IBOutlet weak var yourImageView: UIImageView!
+    @IBOutlet weak var playerCardOneImage: UIImageView!
+    @IBOutlet weak var playerCardTwoImage: UIImageView!
+    @IBOutlet weak var dealerCardOneImage: UIImageView!
+    @IBOutlet weak var dealerCardTwoImage: UIImageView!
+    
     
     //MARK: - Properties
     var cards: [Card] {
@@ -24,10 +25,10 @@ class BlackJackViewController: UIViewController {
         let twoOfHearts = Card(rank: "2", cardValue: 2, cardImage: UIImage(named: "2_of_hearts")!)
         let twoOfSpades = Card(rank: "2", cardValue: 2, cardImage: UIImage(named: "2_of_spades")!)
         
-        let threeOfClubs = Card(rank: "2", cardValue: 3, cardImage: UIImage(named: "3_of_clubs")!)
-        let threeOfDiamonds = Card(rank: "3", cardValue: 3, cardImage: UIImage(named: "3_of_Diamonds")!)
-        let threeOfHearts = Card(rank: "3", cardValue: 3, cardImage: UIImage(named: "3_of_Hearts")!)
-        let threeOfSpades = Card(rank: "3", cardValue: 3, cardImage: UIImage(named: "3_of_Spades")!)
+        let threeOfClubs = Card(rank: "3", cardValue: 3, cardImage: UIImage(named: "3_of_clubs")!)
+        let threeOfDiamonds = Card(rank: "3", cardValue: 3, cardImage: UIImage(named: "3_of_diamonds")!)
+        let threeOfHearts = Card(rank: "3", cardValue: 3, cardImage: UIImage(named: "3_of_hearts")!)
+        let threeOfSpades = Card(rank: "3", cardValue: 3, cardImage: UIImage(named: "3_of_spades")!)
         
         let fourOfClubs = Card(rank: "4", cardValue: 4, cardImage: UIImage(named: "4_of_clubs")!)
         let fourOfDiamonds = Card(rank: "4", cardValue: 4, cardImage: UIImage(named: "4_of_diamonds")!)
@@ -83,7 +84,7 @@ class BlackJackViewController: UIViewController {
         let queenOfDiamonds = Card(rank: "10", cardValue: 10, cardImage: UIImage(named: "queen_of_diamonds")!)
         let queenOfHearts = Card(rank: "10", cardValue: 10, cardImage: UIImage(named: "queen_of_hearts")!)
         let queenOfSpades = Card(rank: "10", cardValue: 10, cardImage: UIImage(named: "queen_of_spades")!)
-
+        
         return [twoOfClubs, twoOfDiamonds, twoOfHearts, twoOfSpades, threeOfClubs, threeOfDiamonds, threeOfHearts, threeOfSpades, fourOfClubs, fourOfDiamonds, fourOfHearts, fourOfSpades, fiveOfClubs, fiveOfDiamonds, fiveOfHearts, fiveOfSpades, sixOfClubs, sixOfDiamonds, sixOfHearts, sixOfSpades, sevenOfClubs, sevenOfDiamonds, sevenOfHearts, sevenOfSpades, eightOfClubs, eightOfDiamonds, eightOfHearts, eightOfSpades, nineOfClubs, nineOfDiamonds, nineOfHearts, nineOfSpades, tenOfClubs, tenOfDiamonds, tenOfHearts, tenOfSpades, aceOfClubs, aceOfDiamonds, aceOfHearts, aceOfSpades, jackOfClubs, jackOfDiamonds, jackOfHearts, jackOfSpades, queenOfClubs, queenOfDiamonds, queenOfHearts, queenOfSpades, kingOfClubs, kingOfDiamonds, kingOfHearts, kingOfSpades]
     }
     
@@ -94,6 +95,13 @@ class BlackJackViewController: UIViewController {
         
     }
     
+    func updateViews() {
+           playerCardOneImage.image = UIImage(named: "\(cards[1])")
+           playerCardTwoImage.image = UIImage(named: "\(cards[3])")
+           dealerCardOneImage.image = UIImage(named: "\(cards[0])")
+           dealerCardTwoImage.image = UIImage(named: "\(cards[2])")
+       }
+    
     //MARK: - Actions
     @IBAction func hitButtonTapped(_ sender: Any) {
         //calc the total
@@ -102,63 +110,53 @@ class BlackJackViewController: UIViewController {
         
     }
     
-    @IBAction func infoButtonTapped(_ sender: Any) {
-        //alertcontroller
-        //segue
-    }
-    
     @IBAction func standButtonTapped(_ sender: Any) {
         //stops makes score final and starts dealer turn
     }
     
     
-      func deal() {
-            let shuffledDeck = cards.shuffled()
-            
-            let dealerCards = [shuffledDeck[0], shuffledDeck[2]]
-            let playerCards = [shuffledDeck[1], shuffledDeck[3]]
-            
-            var dealerCardScore: Int = 0
-            var playerCardScore: Int = 0
-            
-            for card in dealerCards {
-                dealerCardScore += card.cardValue
-            }
-            
-            for card in playerCards {
-                playerCardScore += card.cardValue
-            }
-            
-    //        sleep(3)
-            if dealerCardScore > playerCardScore {
-                // present loser alert
-            } else if playerCardScore > dealerCardScore {
-                // present winner alert
-            } else {
-                // present tie alert
-            }
-            
-            
-            
+    @IBAction func dealButtonTapped(_ sender: Any) {
+        deal()
+        updateViews()
+        
+    }
+    
+    
+    func deal() {
+        let shuffledDeck = cards.shuffled()
+        
+        let dealerCards = [shuffledDeck[0], shuffledDeck[2]]
+        let playerCards = [shuffledDeck[1], shuffledDeck[3]]
+        
+//        playerCardOneImage.image = UIImage(named: "\(shuffledDeck[1])")
+//        playerCardTwoImage.image = UIImage(named: "\(shuffledDeck[3])")
+//        dealerCardOneImage.image = UIImage(named: "\(shuffledDeck[0])")
+//        dealerCardTwoImage.image = UIImage(named: "\(shuffledDeck[2])")
+        
+        var dealerCardScore: Int = 0
+        var playerCardScore: Int = 0
+        
+        for card in dealerCards {
+            dealerCardScore += card.cardValue
         }
         
+        for card in playerCards {
+            playerCardScore += card.cardValue
+        }
+        
+        sleep(3)
+        if dealerCardScore > playerCardScore {
+            lostAlertController()
+        } else if playerCardScore > dealerCardScore {
+            wonAlertController()
+        } else {
+            tieAlertController()
+        }
+        
+    }
     
-    
-    
-    //add draw button
-    
-    /*
-     add deal button
-    add alert and goes back to view and resets the score cards go away and redeal
-    */
     
     //MARK: - Helper
-    
-//    func yourScore() {
-//        if yourScoreLabel > 21 {
-//            bustedAlertController()
-//        }
-//    }
     
     //MARK: - Alert Controllers
     func lostAlertController() {
@@ -193,20 +191,5 @@ class BlackJackViewController: UIViewController {
         present(tieAlertController, animated: true)
     }
     
-    
-    func updateViews() {
-        dealerImageView.image = UIImage()
-        yourScoreLabel.text = ""
-        dealerScoreLabel.text = ""
-        yourImageView.image = UIImage()
-    }
-    
-    //shuffle function
-    //deal function
-    
-    
-    //wining function if the hand value is greater then the dealers hand
-    
-
 }//end of class
 
