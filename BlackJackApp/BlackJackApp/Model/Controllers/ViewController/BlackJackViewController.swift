@@ -109,7 +109,6 @@ class BlackJackViewController: UIViewController {
     
     @IBAction func standButtonTapped(_ sender: Any) {
         //stops makes score final and starts dealer turn
-        
     }
     
     //add draw button
