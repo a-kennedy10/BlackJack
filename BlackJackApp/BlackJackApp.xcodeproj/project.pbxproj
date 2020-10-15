@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5A0E32142537A26600C1247B /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E32132537A26600C1247B /* CardController.swift */; };
-		5A0E32182537A29900C1247B /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E32172537A29900C1247B /* PlayerController.swift */; };
 		5A0E321C2537A2C100C1247B /* BlackJackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E321B2537A2C100C1247B /* BlackJackViewController.swift */; };
 		FA1C2F2E2537769D006371E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C2F2D2537769D006371E5 /* AppDelegate.swift */; };
 		FA1C2F302537769D006371E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C2F2F2537769D006371E5 /* SceneDelegate.swift */; };
@@ -96,6 +95,7 @@
 		FA1C2F2C2537769D006371E5 /* BlackJackApp */ = {
 			isa = PBXGroup;
 			children = (
+				5A0E32112537A0E600C1247B /* Controllers */,
 				FA83CA012537A421004EFC8C /* Extensions */,
 				FACEC6212537908A00E17966 /* Model */,
 				FA1C2F332537769D006371E5 /* Main.storyboard */,
@@ -128,14 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				FACEC622253790B200E17966 /* Card.swift */,
-
-			
-				5A0E32112537A0E600C1247B /* Controllers */,
-
 				FA83CA042537A7F6004EFC8C /* Game.swift */,
 				FA83CA062537AB55004EFC8C /* Hand.swift */,
 				FA83CA082537ADBB004EFC8C /* Deck.swift */,
-
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,15 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				5A0E32142537A26600C1247B /* CardController.swift in Sources */,
-				
 				5A0E321C2537A2C100C1247B /* BlackJackViewController.swift in Sources */,
-			
-
 				FA83CA092537ADBB004EFC8C /* Deck.swift in Sources */,
 				FA83CA052537A7F6004EFC8C /* Game.swift in Sources */,
-
 				FACEC623253790B200E17966 /* Card.swift in Sources */,
 				FA83CA072537AB55004EFC8C /* Hand.swift in Sources */,
 				FA1C2F2E2537769D006371E5 /* AppDelegate.swift in Sources */,

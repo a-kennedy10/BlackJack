@@ -17,9 +17,7 @@ class Card {
         self.suit = suit
         self.rank = rank
         self.cardValue = cardValue
-    
     }
-    
 }
 
 
