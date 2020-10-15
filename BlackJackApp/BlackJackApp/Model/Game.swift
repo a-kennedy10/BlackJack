@@ -13,6 +13,5 @@ class Game {
     
     init(score: Int) {
         self.score = score
-        self.cardImage = cardImage
     }
 }
