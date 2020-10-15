@@ -10,9 +10,8 @@ import UIKit
 
 class Game {
     var score: Int
-    var cardImage: UIImage
     
-    init(score: Int, cardImage: UIImage) {
+    init(score: Int) {
         self.score = score
         self.cardImage = cardImage
     }
