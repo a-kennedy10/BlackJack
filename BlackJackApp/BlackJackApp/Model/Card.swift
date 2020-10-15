@@ -16,10 +16,12 @@ class Card {
     init(rank: String, cardValue: Int, cardImage: UIImage) {
         self.rank = rank
         self.cardValue = cardValue
+<<<<<<< HEAD
+=======
         self.cardImage = cardImage
     
+>>>>>>> 23a54002cba22504fbb67e47896e04ac918caf4b
     }
-    
 }
 
 

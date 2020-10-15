@@ -111,6 +111,40 @@ class BlackJackViewController: UIViewController {
         //stops makes score final and starts dealer turn
     }
     
+    
+      func deal() {
+            let shuffledDeck = cards.shuffled()
+            
+            let dealerCards = [shuffledDeck[0], shuffledDeck[2]]
+            let playerCards = [shuffledDeck[1], shuffledDeck[3]]
+            
+            var dealerCardScore: Int = 0
+            var playerCardScore: Int = 0
+            
+            for card in dealerCards {
+                dealerCardScore += card.cardValue
+            }
+            
+            for card in playerCards {
+                playerCardScore += card.cardValue
+            }
+            
+    //        sleep(3)
+            if dealerCardScore > playerCardScore {
+                // present loser alert
+            } else if playerCardScore > dealerCardScore {
+                // present winner alert
+            } else {
+                // present tie alert
+            }
+            
+            
+            
+        }
+        
+    
+    
+    
     //add draw button
     
     /*
