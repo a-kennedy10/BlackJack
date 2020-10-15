@@ -9,13 +9,17 @@
 import UIKit
 
 class Card {
+    var suit: String
+    var rank: String
     var cardValue: Int
-    var cardImage: UIImage
-    var score: String
     
-    init( cardValue: Int, cardImage: UIImage, score: String){
+    init(suit: String, rank: String, cardValue: Int){
+        self.suit = suit
+        self.rank = rank
         self.cardValue = cardValue
-        self.cardImage = cardImage
-        self.score = score
+    
     }
+    
 }
+
+

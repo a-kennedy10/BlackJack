@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vjt-Fh-Agv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -25,26 +25,28 @@
                                     <action selector="hitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RkX-sw-h0E"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-Wn-cxW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10_of_clubs" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-Wn-cxW">
                                 <rect key="frame" x="171" y="204" width="72" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Black Jack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTq-jp-kt4">
-                                <rect key="frame" x="124" y="49" width="166" height="30"/>
+                                <rect key="frame" x="124" y="93" width="166" height="30"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dealer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tne-jd-H8C">
-                                <rect key="frame" x="20" y="144" width="50" height="21"/>
+                                <rect key="frame" x="20" y="188" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk2-Ii-T4E">
-                                <rect key="frame" x="359" y="49" width="25" height="24"/>
+
+                                <rect key="frame" x="359" y="93" width="25" height="24"/>
                                 <connections>
-                                    <action selector="infoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fEv-d0-vJR"/>
+                                    <segue destination="7Ib-NR-9jj" kind="show" identifier="toInfoDetailVC" id="uv5-9w-vk4"/>
+
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl3-2y-sbb">
@@ -67,7 +69,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruC-PV-Dpt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10_of_diamonds" translatesAutoresizingMaskIntoConstraints="NO" id="ruC-PV-Dpt">
                                 <rect key="frame" x="171" y="584" width="72" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -78,6 +80,11 @@
                                 <connections>
                                     <action selector="standButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKL-bh-ijq"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-Ei-QDV">
+                                <rect key="frame" x="184" y="433" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="(DEAL)"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -90,19 +97,138 @@
                             <constraint firstItem="vk2-Ii-T4E" firstAttribute="leading" secondItem="lTq-jp-kt4" secondAttribute="trailing" constant="70" id="sD5-uk-DxF"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="dealerImageView" destination="EYf-Wn-cxW" id="W0K-G8-lxO"/>
-                        <outlet property="dealerScoreLabel" destination="slY-fF-5Th" id="EHK-lZ-0xE"/>
-                        <outlet property="yourImageView" destination="ruC-PV-Dpt" id="RaX-Ka-TE3"/>
-                        <outlet property="yourScoreLabel" destination="89M-Z3-ISN" id="CiB-ba-0P1"/>
-                    </connections>
+
+                    <navigationItem key="navigationItem" id="IOt-TM-gVk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707" y="81"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="80.357142857142847"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufp-Cr-XJa">
+            <objects>
+                <viewController id="7Ib-NR-9jj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dP7-uY-raM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zBK-q7-2Zj">
+                                <rect key="frame" x="115" y="113" width="184" height="74"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Play" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bn-2x-Dgi">
+                                        <rect key="frame" x="9.5" y="0.0" width="165" height="28"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLACKJACK" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZc-GT-tEz">
+                                        <rect key="frame" x="25" y="46" width="134" height="28"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PKG-hM-VnU">
+                                <rect key="frame" x="20" y="262" width="374" height="555"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&gt; The objective of Blackjack is to beat the Dealer's hand without going over 21." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C2i-Y9-9Ye">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="69"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&gt; Face cards (Jack, Queen, King) are worth 10. Aces are worth 1 or 11, whichever will make a better hand." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g4E-6X-ewF">
+                                        <rect key="frame" x="0.0" y="81" width="374" height="69"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RUr-Jv-A9s">
+                                        <rect key="frame" x="0.0" y="162" width="374" height="69"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">&gt; The Player and Dealer will both start with two cards. The Dealer's last card will remain hidden until both your cards have been drawn.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&gt; The 'Hit' button will ask for another card. The 'Stand' button will hold your current total and end your turn." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k5j-65-nDb">
+                                        <rect key="frame" x="0.0" y="243" width="374" height="69"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&gt; If you go over 21, you bust and in result, you lose the round while the Dealer wins, regardless of their hand." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ht2-xh-oZq">
+                                        <rect key="frame" x="0.0" y="324" width="374" height="69"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&gt; If you are dealt 21 from the start (Ace &amp; 10), you have a Blackjack and win the round." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Zl-Px-f2j">
+                                        <rect key="frame" x="0.0" y="405" width="374" height="69"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&gt; Dealer will automatically hit until 17 or higher. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fdd-iP-9NE">
+                                        <rect key="frame" x="0.0" y="486" width="374" height="69"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eoD-hp-HKq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zBK-q7-2Zj" firstAttribute="top" secondItem="eoD-hp-HKq" secondAttribute="top" constant="25" id="1sD-4k-PC9"/>
+                            <constraint firstItem="eoD-hp-HKq" firstAttribute="trailing" secondItem="PKG-hM-VnU" secondAttribute="trailing" constant="20" id="Gm1-EW-IQ1"/>
+                            <constraint firstItem="PKG-hM-VnU" firstAttribute="top" secondItem="zBK-q7-2Zj" secondAttribute="bottom" constant="75" id="IZk-Pj-XOq"/>
+                            <constraint firstItem="eoD-hp-HKq" firstAttribute="bottom" secondItem="PKG-hM-VnU" secondAttribute="bottom" constant="45" id="aQQ-Rf-MDz"/>
+                            <constraint firstItem="zBK-q7-2Zj" firstAttribute="leading" secondItem="eoD-hp-HKq" secondAttribute="leading" constant="115" id="kYF-LD-xWk"/>
+                            <constraint firstItem="PKG-hM-VnU" firstAttribute="leading" secondItem="eoD-hp-HKq" secondAttribute="leading" constant="20" id="njX-En-vu7"/>
+                            <constraint firstItem="eoD-hp-HKq" firstAttribute="trailing" secondItem="zBK-q7-2Zj" secondAttribute="trailing" constant="115" id="rn6-OX-gsH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GFv-84-dLz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6vc-2k-inH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860.8695652173915" y="79.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yCJ-28-I1j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vjt-Fh-Agv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kE6-lV-yMR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bK0-tq-wsE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRJ-jf-gJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="80"/>
+
         </scene>
     </scenes>
     <resources>
+        <image name="10_of_clubs" width="500" height="726"/>
+        <image name="10_of_diamonds" width="500" height="726"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
