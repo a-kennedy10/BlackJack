@@ -127,9 +127,9 @@ class BlackJackViewController: UIViewController {
 //        }
 //    }
     
-    
-    func bustedAlertController() {
-        let alertController = UIAlertController(title: "Busted", message: "You went over 21!. Try your luck and play again!", preferredStyle: .alert)
+    //MARK: - Alert Controllers
+    func loseAlertController() {
+        let alertController = UIAlertController(title: "Lost", message: "Sorry you lost😢. Try your luck and play again!", preferredStyle: .alert)
         
         let playAgainAction = UIAlertAction(title: "Play again!", style: .default) { (_) in
             self.updateViews()
@@ -140,12 +140,36 @@ class BlackJackViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    
-    func updateViews() {
+    func wonAlertController() {
+        let alertController = UIAlertController(title: "WON!!", message: "Congrats You Won!!!", preferredStyle: .alert)
+        
+        let playAgain = UIAlertAction(title: "Play Again!", style: .default) { (_) in
+            self.updateViews()
+        }
+        alertController.addAction(playAgain)
+        present(alertController, animated: true)
         
     }
     
+    
+    func updateViews() {
+        dealerImageView.image = UIImage()
+        yourScoreLabel.text = ""
+        dealerScoreLabel.text = ""
+        yourImageView.image = UIImage()
+    }
+    
     //shuffle function
+    //deal function
+    
+    func deal() {
+        
+         //cards.shuffle()
+        
+        //dealerImageView.image = UIImage(named: cards[0])
+    }
+    
+    //wining function if the hand value is greater then the dealers hand
     
 
 }//end of class
